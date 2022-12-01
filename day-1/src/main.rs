@@ -25,7 +25,7 @@ fn main() {
                 if resp == "\n" {
                     if sum>top[0] {
                         top.push(sum);
-                        top.sort();
+                        top.sort(); // [low,..,high]
                         top.remove(0);
                     }
                     sum = 0;
