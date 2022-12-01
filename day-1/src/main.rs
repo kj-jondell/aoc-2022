@@ -15,7 +15,7 @@ fn get_input() -> Result<String, String> {
 }
 
 fn main() {
-    let amt_to_sum: u8 = 3; //amt of top values
+    let amt_to_sum: usize = 3; //amt of top values
     let mut sum: u32 = 0; // sum of calories
     let mut top = vec![0; amt_to_sum]; 
 
