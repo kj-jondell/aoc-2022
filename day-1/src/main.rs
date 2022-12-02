@@ -1,5 +1,3 @@
-use std::io;
-
 /*
  Generic function to read values from stdin. Pipe file with e.g. 'cat file|cargo run'
  TODO move to other module
@@ -34,7 +32,11 @@ fn main() {
                     sum += resp.trim().parse::<u32>().unwrap();
                 }
             },
-            Err(resp) => { //break on EOF
+            Err(_) => { //break on EOF
+                if sum>top[0] { //needed to include last sum
+                        top.push(sum);
+                        top.remove(0);
+                }
                 let max_value: u32 = top.iter().sum();
                 println!("{:?}", max_value); //print sum of top n values
                 break
