@@ -1,5 +1,3 @@
-use std::ops::Index;
-
 /*
  Generic function to read values from stdin. Pipe file with e.g. 'cat file|cargo run'
  TODO move to other module
